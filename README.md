@@ -26,6 +26,29 @@ local inference
 
 The final target is a ~40M parameter model, while development starts with a tiny debug model that can run on a personal computer.
 
+## Local Setup
+
+Recommended environment manager: [uv](https://docs.astral.sh/uv/).
+
+```bash
+git clone https://github.com/Liinn0529/tinygpt-from-scratch.git
+cd tinygpt-from-scratch
+
+uv sync --extra dev
+uv run pytest
+uv run python -m tinygpt --config configs/debug.yaml
+```
+
+Expected smoke-check output includes the TinyGPT version, selected device, config path, and loaded config sections.
+
+You can also run:
+
+```bash
+uv run tinygpt-smoke --config configs/debug.yaml
+```
+
+Device selection prefers CUDA, then Apple MPS, then CPU.
+
 ## Principles
 
 - Implement the core model ourselves.
