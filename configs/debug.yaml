@@ -1,0 +1,21 @@
+model:
+  vocab_size: 1024
+  context_length: 128
+  n_layers: 2
+  d_model: 128
+  n_heads: 4
+  d_ff: 352
+  norm: rmsnorm
+  position_embedding: rope
+  activation: swiglu
+  tie_embeddings: true
+  bias: false
+
+training:
+  batch_size: 8
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0003
+  weight_decay: 0.1
+  warmup_steps: 100
+  max_steps: 1000
+  grad_clip: 1.0

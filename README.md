@@ -57,4 +57,4 @@ See [SPEC.md](SPEC.md), [ROADMAP.md](ROADMAP.md), and [AGENTS.md](AGENTS.md).
 
 ## Status
 
-Project initialization in progress.
+Foundation scaffold initialized. Start with GitHub Issue #1.
